@@ -6,7 +6,8 @@ In the project directory, you can run:
 
 ### `npm run start`
 
-
+## `local dev for lighthouse`
+![Test Image](permormance.png)
 
 
 

@@ -1,7 +1,12 @@
-import React  from 'react';
+import React, { Suspense } from 'react';
 import Filter from './components/Filter/Filter';
-import Home from './components/Home/Home';
+
 import './App.css'
+
+
+
+const HomeComponent = React.lazy(() => import('./components/Home/Home'));
+
 
 
 function App() {
@@ -14,7 +19,10 @@ function App() {
            <Filter /> 
           </div> 
           <div className="home"> 
-           <Home />
+          
+           <Suspense fallback={<div>Loading...</div>}>
+             <HomeComponent />
+            </Suspense>
           </div>
       </div>
        <div className="app__develop">Developed by: <mark>D.SIVA SANKARA REDDY</mark> </div>
