@@ -10,11 +10,13 @@ import './Filter.css'
 function Filter() {
       
     const initialState =[2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020]
+    
+// initialize the values using useState
     const [year,setYear] = useState('');
     const [launch,setLaunch] = useState('');
     const [land,setLand] = useState('');
 
-
+// using useSelotors and useDispach to get data and call action in redux
     const Data =useSelector(state => state.reducerData.Data)
     const dispatch = useDispatch()
      const getData = (year,launch,land)=> dispatch(FetchYearbyData(year,launch,land))
@@ -22,24 +24,24 @@ function Filter() {
      const getLaunch = (value)=> dispatch(LaunchingActions(value))
 
      console.log(Data,"Filter")
-
+//runnng this useEffect dependencies
      useEffect(()=>{
           getData(year,launch,land)
 
      },[year, launch, land])
      
-    
+//update the year value from this method
     const handleGetYear =(value) =>{
       console.log('clicled',value.year)
       setYear(value.year)
-      
+//update the launch value from this method
     }
      const handleLanch =(value) =>{
         setLaunch(value) 
         getLand(value)
       
       }
-
+//update the land value from this method
       const handleLanding =(value) =>{
         setLand(value) 
         getLaunch(value)

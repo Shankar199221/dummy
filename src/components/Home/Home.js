@@ -5,13 +5,14 @@ import Card from '../Card/Card'
 import './Home.css'
 
 function Home() {
-
+//Get data from store using this useselectors .
     const Data =useSelector(state => state.reducerData.Data)
     const dispatch = useDispatch()
+//call getdata function using useDispatch method
      const getData = ()=> dispatch(IntialFetchActon())
 
      console.log(Data,"home")
-
+//Fecting data from redux using api call
      useEffect(()=>{
        getData()
     },[])
@@ -23,8 +24,9 @@ function Home() {
                 Data?.map((data)=>{
                     return <Card key={data.flight_number} item={data}/>
                 })
-            ): (<h2>No Data Available</h2>)}
+            ): (<h1>Loading....</h1>)}
            
+            
         </div>
     )
 }

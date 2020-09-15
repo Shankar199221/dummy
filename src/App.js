@@ -6,7 +6,6 @@ import './App.css'
 
 function App() {
 
-
   return (
     <div className="app">
       <div className="app__content">SpaceX Launch Programs</div>
