@@ -1,0 +1,31 @@
+.yearswrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    margin: 1rem;
+}
+.yearspan {
+    margin: 0.2rem 0.8rem;
+    padding: 1px 10px;
+    border-radius: 10%;
+    background-color: rgb(181, 218, 108);
+    cursor: pointer;
+}
+.yearspan:active {
+    background-color: black;
+}
+.launchers {
+    text-decoration: underline;
+    text-align: center;
+}
+.span {
+    display: inline-block;
+    margin-left: 2rem;
+    padding: 1px 10px;
+    border-radius: 10%;
+    background-color: rgb(181, 218, 108);
+    cursor: pointer;
+}
+.span:active {
+    background-color: black;
+}

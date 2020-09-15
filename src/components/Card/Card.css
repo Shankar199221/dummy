@@ -1,0 +1,8 @@
+.card {
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    padding: 1rem;
+}
+.card__image {
+    background-color: rgba(207, 197, 197, 0.164);
+}

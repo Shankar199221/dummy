@@ -1,0 +1,72 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(207, 197, 197, 0.164);
+}
+.app__components {
+    display: flex;
+}
+
+.app__content {
+    margin-left: 1rem;
+    font-size: larger;
+    font-weight: bolder;
+}
+.app__develop {
+    margin-left: 30rem;
+}
+
+.filter {
+    margin-left: 1.2rem;
+    width: 15%;
+    background-color: white;
+    height: 35rem;
+    overflow: hidden;
+}
+.home {
+    width: 80%;
+}
+
+@media screen and (max-width: 700px) {
+    .app {
+      display: flex;
+      flex-direction: column;
+     
+    }
+    .app__components {
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .filter {
+       margin-bottom: 1rem;
+       width: 220px;
+       height: 30rem;
+    }
+    .home {
+        width: 250px;
+    }
+   
+   
+    .app__develop {
+        margin-left: 0;
+    }
+  }
+
+  @media (min-width: 700px) and (max-width: 1024px) {
+    .filter {
+        margin-bottom: 1rem;
+        width: 30%;
+        height: 30rem;
+     }
+    
+    .home {
+        width: 70%;
+        
+    }
+    .app__develop {
+        margin-left: 12rem;
+    }
+  }
+ 
