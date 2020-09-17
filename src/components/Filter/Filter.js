@@ -23,7 +23,7 @@ function Filter() {
      const getLand = (value)=> dispatch(LandingActions(value))
      const getLaunch = (value)=> dispatch(LaunchingActions(value))
 
-     console.log(Data,"Filter")
+    //  console.log(Data,"Filter")
 //runnng this useEffect dependencies
      useEffect(()=>{
           getData(year,launch,land)
@@ -32,7 +32,7 @@ function Filter() {
      
 //update the year value from this method
     const handleGetYear =(value) =>{
-      console.log('clicled',value.year)
+    //   console.log('clicled',value.year)
       setYear(value.year)
 //update the launch value from this method
     }

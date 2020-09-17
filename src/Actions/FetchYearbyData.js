@@ -3,7 +3,7 @@ const FetchYearbyData =(year,launch,land)=>{
         fetch(`https://api.spacexdata.com/v3/launches?limit=100&launch_success=${launch}&land_success=${land}&launch_year=${year}`)
         .then(res => res.json())
         .then(res => {
-             console.log(res,'action')
+            //  console.log(res,'action')
              dispatch({type:"GET_DATA",payload:res})
         })
         .catch(err => console.log(err))
