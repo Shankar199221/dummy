@@ -7,15 +7,17 @@ import './Home.css'
 function Home() {
 //Get data from store using this useselectors .
     const Data =useSelector(state => state.reducerData.Data)
+   
     const dispatch = useDispatch()
 //call getdata function using useDispatch method
      const getData = ()=> dispatch(IntialFetchActon())
-
-     console.log(Data,"home")
+  let dependacy;
+    //  console.log(Data,"home")
 //Fecting data from redux using api call
      useEffect(()=>{
        getData()
-    },[])
+       // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[dependacy])
      
    
     return (

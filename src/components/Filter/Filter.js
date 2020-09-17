@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React,{useEffect, useState} from 'react'
-import {useSelector, useDispatch} from 'react-redux'
+import { useDispatch} from 'react-redux'
 import FetchYearbyData from '../../Actions/FetchYearbyData';
 import LandingActions from '../../Actions/LandingActions';
 import LaunchingActions from '../../Actions/LaunchingActions';
@@ -17,7 +17,7 @@ function Filter() {
     const [land,setLand] = useState('');
 
 // using useSelotors and useDispach to get data and call action in redux
-    const Data =useSelector(state => state.reducerData.Data)
+    // const Data =useSelector(state => state.reducerData.Data)
     const dispatch = useDispatch()
      const getData = (year,launch,land)=> dispatch(FetchYearbyData(year,launch,land))
      const getLand = (value)=> dispatch(LandingActions(value))
